@@ -268,7 +268,7 @@ class ImageSender(Node):
             ]
         }
         headers = {
-            "Authorization": "Bearer sk-3afabdfae7244204af27cc3480bbf63d",
+            "Authorization": "",
             "Content-Type": "application/json"
         }
 
