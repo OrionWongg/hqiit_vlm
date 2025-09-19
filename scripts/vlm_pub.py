@@ -55,8 +55,8 @@ class ImageSender(Node):
 
         # Baidu AipSpeech credentials (for both ASR and TTS)
         self.APP_ID = '6818881'
-        self.API_KEY = "nhCW0mN0yNAvL9mPmmoXcsPI" # Placeholder, replace with your actual API Key
-        self.SECRET_KEY = "sLNhbmq0180wTarIHrpIjznOjgcPOC0e" # Placeholder, replace with your actual Secret Key
+        self.API_KEY = "" # Placeholder, replace with your actual API Key
+        self.SECRET_KEY = "" # Placeholder, replace with your actual Secret Key
         self.speech_client = AipSpeech(self.APP_ID, self.API_KEY, self.SECRET_KEY)
 
         # Audio Prompts
@@ -698,7 +698,7 @@ class ImageSender(Node):
             ]
         }
         headers = {
-            "Authorization": "Bearer sk-3afabdfae7244204af27cc3480bbf63d",
+            "Authorization": "",
             "Content-Type": "application/json"
         }
 
