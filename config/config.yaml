@@ -1,0 +1,11 @@
+topics:
+  subscribers:
+    camera: 'camera_image'  # 相机图像话题
+    input: '/vlm_input'     # 文本输入话题
+  publishers:
+    output: 'vlm_output'    # 文本输出话题
+
+api:
+  dashscope:
+    url: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions'
+    key: ''
