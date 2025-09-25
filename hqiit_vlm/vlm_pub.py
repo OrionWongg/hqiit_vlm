@@ -5,7 +5,7 @@ import threading
 import json
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image,CompressedImage
 from std_msgs.msg import String
 import requests
 import cv2
@@ -73,7 +73,7 @@ class VLMPub(Node):
         
         # 创建持续的图像订阅
         self.subscription = self.create_subscription(
-            Image,
+            CompressedImage,
             self.config['topics']['subscribers']['camera'],
             self.image_callback,
             10
@@ -152,7 +152,7 @@ class VLMPub(Node):
     def image_callback(self, msg):
         """持续接收并更新最新图像，增加有效性校验"""
         try:
-            cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
+            cv_image = self.bridge.compressed_imgmsg_to_cv2(msg, desired_encoding='bgr8')
             
             # 检查图像是否有效：尺寸需大于0
             height, width = cv_image.shape[:2]
