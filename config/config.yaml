@@ -1,9 +1,18 @@
 topics:
   subscribers:
-    camera: 'camera_image'  # 相机图像话题
-    input: '/vlm_input'     # 文本输入话题
+    camera: '/camera/image_raw/compressed'  # 相机图像话题
+    input: '/mobile_sensor/speech'     # 文本输入话题
+    trans: '/mobile_sensor/tts'         # VLM输出话题，用于msg_trans节点订阅
   publishers:
-    output: 'vlm_output'    # 文本输出话题
+    output: '/mobile_sensor/tts'      # 文本输出话题
+    cmd_vel: '/cmd_vel'               # 机器人控制话题
+
+cmd_vel:
+  publish_rate:
+    movement: 10.0    # 移动和转向命令的发布频率 (Hz)
+    altitude: 1.0     # 升高和降低命令的发布频率 (Hz)
+  duration: 1.0       # 动作持续时间 (秒)
+  timeout: 1.0        # 命令超时时间 (秒)
 
 api:
   dashscope:

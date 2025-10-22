@@ -26,6 +26,7 @@ setup(
     entry_points={
         'console_scripts': [
             'vlm_pub_node = hqiit_vlm.vlm_pub:main',
+            'msg_trans_node = hqiit_vlm.msg_trans:main', 
         ],
     },
 )

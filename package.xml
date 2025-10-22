@@ -13,6 +13,7 @@
   <exec_depend>sensor_msgs</exec_depend>  <!-- 图像消息类型 -->
   <exec_depend>std_msgs</exec_depend>     <!-- 文本消息类型 -->
   <exec_depend>cv_bridge</exec_depend>    <!-- 图像格式转换（ROS→OpenCV） -->
+    <exec_depend>geometry_msgs</exec_depend>  <!-- 添加此行用于Twist消息类型 -->
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
