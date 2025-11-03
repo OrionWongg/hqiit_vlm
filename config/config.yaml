@@ -1,20 +1,21 @@
 topics:
   subscribers:
-    camera: '/camera/image_raw/compressed'  # 相机图像话题
-    input: '/mobile_sensor/speech'     # 文本输入话题
-    trans: '/mobile_sensor/tts'         # VLM输出话题，用于msg_trans节点订阅
+    camera_left: '/image_raw_0'
+    camera_right: '/image_raw_1'
+    gps: '/gps/fix'
   publishers:
-    output: '/mobile_sensor/tts'      # 文本输出话题
-    cmd_vel: '/cmd_vel'               # 机器人控制话题
+    output: '/mobile_sensor/tts'
 
-cmd_vel:
-  publish_rate:
-    movement: 10.0    # 移动和转向命令的发布频率 (Hz)
-    altitude: 1.0     # 升高和降低命令的发布频率 (Hz)
-  duration: 1.0       # 动作持续时间 (秒)
-  timeout: 1.0        # 命令超时时间 (秒)
+timing:
+  image_save_interval: 5.0    # 图片保存间隔(秒)
+  vlm_process_interval: 30.0  # VLM处理间隔(秒)
 
 api:
   dashscope:
     url: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions'
     key: ''
+
+logging:
+  base_dir: 'vlm_logs'       # 基础日志目录
+  images_dir: 'images'       # 图片子目录
+  metadata_dir: 'metadata'   # 元数据子目录

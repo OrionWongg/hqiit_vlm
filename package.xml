@@ -7,13 +7,21 @@
   <maintainer email="your_email@xxx.com">Your Name</maintainer>
   <license>Apache-2.0</license>
 
-  <!-- 核心依赖 -->
   <buildtool_depend>ament_python</buildtool_depend>
+  
+  <!-- ROS2依赖 -->
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>  <!-- 图像消息类型 -->
-  <exec_depend>std_msgs</exec_depend>     <!-- 文本消息类型 -->
-  <exec_depend>cv_bridge</exec_depend>    <!-- 图像格式转换（ROS→OpenCV） -->
-    <exec_depend>geometry_msgs</exec_depend>  <!-- 添加此行用于Twist消息类型 -->
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <!-- Python包依赖 -->
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>python3-requests</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
