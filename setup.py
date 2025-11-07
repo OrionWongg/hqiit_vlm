@@ -31,7 +31,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'vlm_pub_node = hqiit_vlm.vlm_pub:main',
+            'dino_vlm_pub_node = hqiit_vlm.dino_vlm_pub:main',
+            'yolo_vlm_pub_node = hqiit_vlm.yolo_vlm_pub:main',
         ],
     },
 )

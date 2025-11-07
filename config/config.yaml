@@ -2,6 +2,8 @@ topics:
   subscribers:
     camera_left: '/image_raw_0'
     camera_right: '/image_raw_1'
+    yolo_left: '/detections_0'   
+    yolo_right: '/detections_1' 
     gps: '/gps/fix'
   publishers:
     output: '/vlm_output'
@@ -18,7 +20,7 @@ api:
     create_url: 'https://api.deepdataspace.com/v2/task/grounding_dino/detection'
     query_url: 'https://api.deepdataspace.com/v2/task_status'
     token: ''  # 请替换为你的token
-    model: 'GroundingDino-1.5-Pro'
+    model: 'GroundingDino-1.6-Edge'
     prompt: 'person.car.bicycle.traffic light.book.chair'  # 检测目标，用点号分隔
     bbox_threshold: 0.5  # 边界框置信度阈值
     iou_threshold: 0.8    # IoU阈值
