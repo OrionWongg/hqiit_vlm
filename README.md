@@ -1,1 +1,2 @@
-逐际动力版本，仅保留文本与图像输入.可在config.yaml中配置输入输出话题以及api_key
+通用平台，支持yolo+qwen以及dino+qwen
+使用方法详见https://m0b6npyfmu.feishu.cn/wiki/S5HLwVImRiFLkDkY3locVR5wnqh?from=from_copylink
